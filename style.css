@@ -2,7 +2,7 @@
   --color-primary:#0065FC
 }
 html{
-  font-size: 12px;
+  font-size: 14px;
 }
 body {
     font-family: 'Raleway', sans-serif;
@@ -273,7 +273,7 @@ a {
   padding: 0.375rem;
   border-radius: 1.25rem;
   box-shadow: 0 0 16px #0000002e;
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
   cursor: pointer;
   box-sizing: border-box;
   height: 100%;
@@ -285,12 +285,14 @@ a {
   margin: 0;
 }
 .hostingMainCardFigureImg {
-  height: 7rem;
+  height: 9rem;
   object-fit: cover;
   max-width: 100%;
   width: 100%;
   max-height: 100%;
   border-radius: 1rem 1rem 0 0;
+
+  ;
 }
 .hostingMainCardFigureCaptionTitle {
   margin: 0.25rem 0.75rem 0 0.75rem;
@@ -389,5 +391,134 @@ a {
   .hostingPopular {
     grid-template-columns: 1fr;
     grid-template-rows: auto repeat(3, 9rem);
+  }
+}
+.activity {
+  display: grid;
+  column-gap: 2rem;
+  margin: 4rem 0;
+}
+.activityTitle {
+  grid-column: 1/-1;
+}
+.activityCard {
+  box-shadow: 0 0 20px #0000002e;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition-duration: 0.1s;
+}
+
+.activityCardWrapimg {
+  position: relative;
+  flex: 1;
+}
+.activityCardWrapimgImg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.activityCardTitle {
+  margin: 1.2rem 1.5rem;
+}
+
+@media (min-width: 1100px) {
+  .activity {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 14rem 2rem 2rem 2rem 14rem;
+  }
+  .activityCard1 {
+    grid-row: 2/7;
+    grid-column: 1/2;
+  }
+  .activityCard2 {
+    grid-column: 2/3;
+    grid-row: 2/5;
+  }
+  .activityCard3 {
+    grid-column: 3/4;
+    grid-row: 2/7;
+  }
+  .activityCard4 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+  .activityCard5 {
+    grid-column: 2/3;
+    grid-row: 6/7;
+  }
+  .activityCard6 {
+    grid-column: 4/5;
+    grid-row: 4/7;
+  }
+}
+@media (max-width: 1100px) {
+  .activity {
+    row-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 12rem 12rem;
+  }
+}
+@media (max-width: 925px) {
+  .activity {
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 12rem 12rem 12rem;
+  }
+}
+@media (max-width: 650px) {
+  .activity {
+    row-gap: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 12rem 12rem 12rem 12rem 12rem 12rem;
+  }
+}
+.footer {
+  background-color: #F2F2F2;
+  width: 100%;
+}
+.footerColumnwrapper {
+  display: flex;
+  max-width: 100%;
+  width: 1440px;
+  margin: auto;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+.footerColumnwrapperColumn {
+  width: 30%;
+  padding: 2rem 2rem;
+}
+.footerColumnwrapperColumnLink {
+  display: block;
+  margin: 1rem 0;
+}
+.footerColumnwrapperColumnLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 750px) {
+  .footerColumnwrapper {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .footerColumnwrapperColumn {
+    width: 100%;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  .footerColumnwrapperColumn:first-child {
+    margin-top: 0;
+  }
+  .footerColumnwrapperColumn:last-child {
+    margin-bottom: 0;
+  }
+  .footerColumnwrapperColumnTitle {
+    margin: 0;
+  }
+  .footerColumnwrapperColumnLink:last-child {
+    margin-bottom: 0;
   }
 }
