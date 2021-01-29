@@ -262,11 +262,9 @@ a {
   column-gap: 2rem;
   row-gap: 2rem;
 }
-.hostingMainHeader {
-  grid-column: 1/-1;
-}
 .hostingMainHeaderTitle {
   margin: 0;
+  grid-column: 1/-1;
 }
 .hostingMainCard {
   background-color: white;
